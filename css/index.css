@@ -1,0 +1,345 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'IBM Plex Mono';
+    
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    margin-top: 44px;
+    top: 44px;
+    left: 472px;
+    width: 336px;
+    height: 52px;
+}
+
+h1 {
+    width: 336px;
+    height: 52px;
+    font-weight: 600;
+    font-size: 40px;
+    line-height: 52px;
+    letter-spacing: -0.08em;
+    color: #4520AB;
+    
+}
+
+input {
+    border: none;
+}
+
+.input-text {
+display: flex;
+margin-top: 86px;
+align-items: center;
+border-radius: 14px;
+border: 2px solid #111111;
+width: 500px;
+height: 56px;
+}
+
+.enterText {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    border-radius: 14px;
+    padding-left: 21px;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 23px;
+    letter-spacing: -0.05em;
+    outline: none;
+    opacity: 0.4;
+    caret-color: #111111;
+    width: 68%;
+}
+
+.enter {
+    display: block;
+    position: absolute;
+    width: 107px;
+    height: 38.08px;
+    background-color: #111111;
+    border-radius: 8px;
+    border: none;
+    color: #ffffff;
+    align-items: center;
+    justify-content: center;
+    margin-left: 385px;
+    font-weight: 100px;
+    font-size: 18px;
+    line-height: 23px;
+    letter-spacing: -0.03em;
+}
+
+.enter:hover {
+    transform: scale(1.1);
+}
+
+.enter:active {
+    transform: scale(0.9);
+}
+
+.first-line {
+    display: flex;
+    box-sizing: border-box;
+    justify-content: center;
+    margin-top: 60px;
+    
+}
+
+.left-main {
+    border-radius: 8px 0 0 8px;
+    border-right: 2px solid #111111;
+    background: #F0F0F0;
+    border-bottom: 2px solid #000000;
+}
+
+.right-main {
+    border-radius: 0 8px 8px 0;
+    background: #ced6d9;
+    border-bottom: 2px solid #000000;
+  }
+
+.left {
+    display: flex;
+    box-sizing: border-box;
+    width: 250px;
+    height: 40px;
+    
+    align-items: center;
+    
+    font-size: 18px;
+    /* border-radius: 8px 0 0 8px; */
+}
+
+.number {
+    font-family: 'IBM Plex Mono';
+    display: flex;
+    font-weight: 600;
+    line-height: 40px;
+    color: #111111;
+    padding-left: 12px;
+    letter-spacing: -0.05em;
+    width: 9px;
+    
+}
+
+.cyrillic {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 40px;
+    letter-spacing: -0.0em;
+    color: #111111;
+    padding-left: 28px;
+    
+}
+
+.right {
+    display: flex;
+    box-sizing: border-box;
+    width: 250px;
+    height: 40px;
+    
+    align-items: center;
+    
+    /* border-radius: 0 8px 8px 0; */
+}
+
+.latin {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 40px;
+    letter-spacing: -0.0em;
+    color: #111111;
+    padding-left: 28px;
+}
+
+.deleteWord {
+    margin-left: 220px;
+    position: absolute;
+}
+
+.deleteWord:hover {
+    transform: scale(1.1);
+}
+
+.deleteWord:active {
+    transform: scale(0.9);
+}
+
+.second-line {
+    display: flex;
+    justify-content: center;
+}
+
+.clear {
+    display: flex;
+    box-sizing: border-box;
+    align-items: center;
+    justify-content: space-around;
+    margin-top: 60px;
+    background: darkgray;
+    width: 176px;
+    height: 40px;
+    border-radius: 8px;
+}
+
+.clear-all {
+    display: flex;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 23px;
+    letter-spacing: -0.05em;
+    background: darkgray;
+    border: none;
+    width: 120px;
+}
+
+.clear:hover {
+    transform: scale(1.1);
+}
+
+.clear:active {
+    transform: scale(0.9);
+}
+
+#tooltip {
+    position: relative;
+    display: inline-block;
+}
+    /* Подсказка */
+#tooltip #tooltiptext {
+    visibility: hidden;
+    width: 250px;
+    background-color: #FFFFFF;
+    color: #111111;
+    text-align: center;
+    padding: 5px 0;
+    border-radius: 10px;
+    border: 1px solid #000000;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+    letter-spacing: -0.03em;
+     /* Расположение текста подсказки */
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    position: absolute;
+    justify-content: space-around;
+    bottom: 125%;
+    left: 50%;
+    margin-left: -60px;
+    /* Исчезают в подсказке */
+    opacity: 0;
+    transition: opacity 0.5s;
+}
+    
+#tooltip:hover #tooltiptext {
+  visibility: visible;
+  opacity: 1;
+}
+
+
+
+@media only screen and (max-width: 768px) {
+    header {
+        width: 336xpx;
+        height: 52px;
+        left: 216px;
+        top: 44px;
+    }
+
+    .input-text {
+        width: 500px;
+        height: 56px;
+        }
+
+        .left {
+            width: 250px;                       
+        }
+
+        .right {
+            width: 250px;
+        }
+
+        .deleteWord {
+            margin-left: 220px;
+            position: absolute;
+        }
+
+        .enter {
+            display: block;
+    position: absolute;
+    width: 107px;
+    height: 38.08px;
+    background-color: #111111;
+    border-radius: 8px;
+    border: none;
+    color: #ffffff;
+    align-items: center;
+    justify-content: center;
+    margin-left: 385px;
+    font-weight: 100px;
+    font-size: 18px;
+    line-height: 23px;
+    letter-spacing: -0.03em;
+        }
+}
+
+@media only screen and (max-width: 480px) {
+    header {
+        width: 308xpx;
+        height: 47px;
+        left: 26px;
+        top: 20px;
+    }
+
+    .input-text {
+        width: 328px;
+        height: 56px;
+        margin-top: 76px;
+        }
+
+        .left {
+            width: 164px;                       
+        }
+
+        .right {
+            width: 164px;
+        }
+
+        .deleteWord {
+            margin-left: 135px;
+            position: absolute;
+        }
+
+        .enter {
+            margin-left: 215px;
+        }
+
+        .first-line {
+            margin-top: 50px;
+        }
+
+        .clear {
+            margin-top: 42px;
+        }
+
+        .enterText {
+            width: 52%;
+        }
+}
